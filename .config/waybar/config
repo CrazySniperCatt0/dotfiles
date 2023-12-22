@@ -1,0 +1,66 @@
+{
+  "layer": "top",
+    "modules-left": ["custom/app-menu", "hyprland/workspaces", "gamemode"],
+    "modules-center": ["clock"],
+    "modules-right": ["mpris", "disk", "wireplumber", "network", "custom/power"],
+    "custom/app-menu": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": "$HOME/.config/rofi/launchers/type-2/launcher.sh"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": " ",
+        "default": " "
+    },    
+    "clock": {
+      "format": "<span color='#b4befe'>  </span>{:%H:%M}",
+    },
+      "scroll-step": 1,
+    },
+    "network": {
+    "interface": "wlp4s0",
+    "format": "{ifname}",
+    "format-wifi": "({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click":	"bash $HOME/rofi-wifi-menu/rofi-wifi-menu.sh",
+    "max-length": 50
+    },
+    "custom/power": {
+	"format": " ",
+	"tooltip": false,
+	"on-click": "bash $HOME/.config/rofi/powermenu/type-1/powermenu.sh"
+    },
+    "disk": {
+    "interval": 30,
+    "format": "   {free} on  /",
+    "path": "/"
+    },
+    "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": ["", "", ""]
+    },
+"mpris": {
+	"format": "DEFAULT: {player_icon} {dynamic}",
+	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+	"player-icons": {
+		"default": "⏸",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "▶"
+	},
+	// "ignored-players": ["firefox"]
+},
+}
