@@ -21,3 +21,6 @@ Waybar: status bar
 Rofi Wifi Menu: Edits wifi [Can be found here](https://github.com/ericmurphyxyz/rofi-wifi-menu)
 
 Rofi themes: Makes cool looking menus (Can be found here)[https://github.com/adi1090x/rofi]. Power menu uses Type 1, and the App launcher uses Type 2 Style 1
+
+Resources used
+Wallpaper: [From 512pixels.net](https://512pixels.net/downloads/macos-wallpapers-6k/10-6-Server-6k.jpg) (originally created by apple)
